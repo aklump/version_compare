@@ -1,0 +1,11 @@
+master = "master develop"
+develop = "master develop"
+remote = origin
+create_tags = patch
+push_tags = auto
+push_master = auto
+push_develop = auto
+patch_prefix = .
+preserve_patch_zero = true
+git_root = .
+info_file = version_compare.core.yml

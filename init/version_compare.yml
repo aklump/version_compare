@@ -1,0 +1,2 @@
+installed_modules: ./web/modules/custom
+source_modules: $HOME/Code/Packages/d8

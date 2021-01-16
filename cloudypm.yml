@@ -1,0 +1,5 @@
+name: aklump/version_compare
+clone_from: https://github.com/aklump/version_compare
+entry_script: version_compare.sh
+entry_symlink: version_compare
+on_install: init
