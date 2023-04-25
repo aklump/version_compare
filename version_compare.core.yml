@@ -28,5 +28,5 @@ translate:
     en: null
 name: 'Version Compare'
 description: 'Quickly lists versions of installed custom modules against repository versions.'
-version: 0.0.3
+version: 0.0.4
 author: 'Aaron Klump <sourcecode@intheloftstudios.com>'
