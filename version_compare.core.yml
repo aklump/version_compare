@@ -1,4 +1,4 @@
-title: "Version Compare"
+title: 'Version Compare'
 config_path_base: ../../..
 path_to_app: .
 additional_config:
@@ -6,14 +6,19 @@ additional_config:
 default_command: show
 commands:
   show:
-    help: List all of the available packages and their versions.
+    help: 'List all of the available packages and their versions.'
   init:
     help: 'Initialize local configuration files.'
   help:
     help: 'Show this help screen.'
-    options: { version: { help: 'Display the current version', type: boolean } }
+    options:
+      version:
+        help: 'Display the current version'
+        type: boolean
   clear-cache:
-    aliases: [clearcache, cc]
+    aliases:
+      - clearcache
+      - cc
     help: 'Clear all cached data.'
 translate:
   ids:
@@ -23,5 +28,5 @@ translate:
     en: null
 name: 'Version Compare'
 description: 'Quickly lists versions of installed custom modules against repository versions.'
-version: 0.0.1
+version: 0.0.2
 author: 'Aaron Klump <sourcecode@intheloftstudios.com>'
