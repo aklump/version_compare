@@ -1,0 +1,9 @@
+master: main
+remote: origin
+create_tags: patch
+push_tags: auto
+push_master: auto
+patch_prefix: .
+preserve_patch_zero: true
+git_root: .
+version_file: version_compare.core.yml
