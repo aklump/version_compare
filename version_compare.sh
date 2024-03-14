@@ -23,7 +23,7 @@ function on_pre_config() {
 # Returns 1 if not found.
 function echo_composer_name() {
   if [ -f composer.json ]; then
-    json_set "$(cat composer.json)"
+    json_load_file composer.json
     name="$(json_get_value "name")"
     [[ "$name" ]] && echo "$name" && return 0
   fi
@@ -41,13 +41,13 @@ function echo_version() {
   # TODO Read from .info file, i.e., D7.
 
   if [ -f composer.json ]; then
-    json_set "$(cat composer.json)"
+    json_load_file composer.json
     version="$(json_get_value "version")"
     [[ "$version" ]] && echo "$version" && return 0
   fi
 
   if [ -f package.json ]; then
-    json_set "$(cat package.json)"
+    json_load_file package.json
     version="$(json_get_value "version")"
     [[ "$version" ]] && echo "$version" && return 0
   fi
