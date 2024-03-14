@@ -130,8 +130,12 @@ case $command in
       project_name=${directory##*/}
       json_set "$(get_project_version_json "$project_name")"
 
+      id=""
+      # The ID may come from composer.json#/name...
       id=$(json_get_value "composer")
+      # ... or it may come from the name key from other files.
       [[ ! "$id" ]] && id=$(json_get_value "name")
+      [[ ! "$id" ]] && $(basename $project_name)
 
       bullet=$LI
       [ $i -eq ${#directories[@]} ] && bullet=$LIL
